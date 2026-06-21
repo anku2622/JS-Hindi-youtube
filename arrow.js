@@ -47,3 +47,23 @@ console.log(addTwo(3,5));
 //to return object
 const hel = () => ({username :"Anku"});
 console.log(hel());
+
+//IIFE(Immediately Invoked Function)
+//global scope ke pollution ko hatane ke liye IIFE ka use kia
+(function chai() {
+    console.log('DB connected');
+})(); //semicolon is mandatory to end this function or to write 2 IIFE
+
+(function aurCode(){
+    //this is named IIFE
+    console.log(`DB CONNECTED TWO`)
+})();
+
+//as an arrow function 
+(() => {
+    console.log(`arrow function`)
+})();
+
+((name) => {
+    console.log(`arrow function ${name}`)
+})(`Anku`)
